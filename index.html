@@ -127,10 +127,11 @@
                   "In some ways, programming is like painting"
                 </p>
                 <p class="separator">
-                   Hi there! I'm a seasoned software developer with over 4 years of experience crafting robust solutions for web platforms. 
-                   My expertise lies in full-stack development, specializing in technologies like JavaScript (Node.js, React.js, Angular.js), PHP (Laravel), .NET (C#) 
-                   and relational databases (MySQL, MSSQL). I thrive in collaborative environments and am committed to delivering high-quality code on time. 
-                   Let's discuss how I can help bring your project to life!
+                    Hi there! I'm a seasoned software developer with over 
+                    <span id="experience-years"></span> years of experience crafting robust solutions for web platforms. 
+                    My expertise lies in full-stack development, specializing in technologies like JavaScript (Node.js, React.js, Angular.js), 
+                    PHP (Laravel), .NET (C#) and relational databases (MySQL, MSSQL). I thrive in collaborative environments and am committed 
+                    to delivering high-quality code on time. Let's discuss how I can help bring your project to life!
                 </p>
               </div>
             </div>
@@ -583,5 +584,44 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+
+    <!-- Custom JS -->
+    <script>
+        function calculateMonthsDifference(startDate, endDate) {
+            const start = new Date(startDate);
+            const end = endDate ? new Date(endDate) : new Date();
+            
+            let years = end.getFullYear() - start.getFullYear();
+            let months = end.getMonth() - start.getMonth();
+    
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+    
+            return years * 12 + months;
+        }
+    
+        function calculateTotalExperience() {
+            const dateRanges = [
+                { start: '2019-09-01', end: '2019-12-31' },  // Sept 2019 - Dec 2019
+                { start: '2021-03-01', end: '2021-07-31' },  // Mar 2021 - Jul 2021
+                { start: '2020-06-01', end: '2022-01-31' },  // Jun 2020 - Jan 2022
+                { start: '2022-05-01', end: null }           // May 2022 - Present (null for current date)
+            ];
+    
+            let totalMonths = 0;
+            dateRanges.forEach(range => {
+                totalMonths += calculateMonthsDifference(range.start, range.end);
+            });
+    
+            return (totalMonths / 12).toFixed(1);  // Convert months to years and format to one decimal place
+        }
+    
+        // Calculate total experience and insert into the HTML
+        const totalExperience = calculateTotalExperience();
+        document.getElementById('experience-years').innerText = totalExperience;
+    </script>
   </body>
 </html>
