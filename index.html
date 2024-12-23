@@ -127,27 +127,24 @@
                  Seasoned Full-Stack Developer | <span class="experience-years"></span> Years of Experience
                 </p>
                 <p class="separator">
-                     <h2 style="line-height: 1.6;">Seasoned Full-Stack Developer | <span class="experience-years"></span> Years of Experience</h2>
-
-                        <p style="line-height: 1.6;">Hello! 👋<br>
-                        I'm a results-driven software developer with over 4.5 years of hands-on experience building dynamic and scalable web applications. My expertise spans:</p>
-                        
-                        <p style="line-height: 1.6;">➡️ <strong>Frontend Development</strong>: React.js, Angular.js</p>
-                        <p style="line-height: 1.6;">➡️ <strong>Backend Development</strong>: Node.js, Laravel (PHP), .NET (C#)</p>
-                        <p style="line-height: 1.6;">➡️ <strong>Database Management</strong>: MySQL, MSSQL</p>
-                        
-                        <h3 style="line-height: 1.6;">🌟 Why Choose Me?</h3>
-                        <p style="line-height: 1.6;">➡️ 🚀 <strong>Efficient & Reliable</strong>: I deliver clean, maintainable code on time.</p>
-                        <p style="line-height: 1.6;">➡️ 🤝 <strong>Collaborative</strong>: I excel at working in teams and communicating effectively with clients and developers.</p>
-                        <p style="line-height: 1.6;">➡️ 🔍 <strong>Problem-Solver</strong>: I tackle challenges with creativity and precision, ensuring your project's success.</p>
-                        
-                        <h3 style="line-height: 1.6;">📌 What I Can Do for You:</h3>
-                        <p style="line-height: 1.6;">➡️ Build responsive web platforms</p>
-                        <p style="line-height: 1.6;">➡️ Integrate APIs and optimize performance</p>
-                        <p style="line-height: 1.6;">➡️ Maintain and enhance existing applications</p>
-                        
-                        <p style="line-height: 1.6;">Let’s work together to bring your ideas to life! I’m excited to hear about your project—reach out today.</p>
-
+                      <p style="line-height: 1.6;">Hello! 👋<br>
+                      I'm a results-driven software developer with over 4.5 years of hands-on experience building dynamic and scalable web applications. My expertise spans:</p>
+                      
+                      <p style="line-height: 1.2;">➡️ <strong>Frontend Development</strong>: React.js, Angular.js</p>
+                      <p style="line-height: 1.2;">➡️ <strong>Backend Development</strong>: Node.js, Laravel (PHP), .NET (C#)</p>
+                      <p style="line-height: 1.2;">➡️ <strong>Database Management</strong>: MySQL, MSSQL</p>
+                      
+                      <h3 style="line-height: 1.6;">🌟 Why Choose Me?</h3>
+                      <p style="line-height: 1.2;">➡️ 🚀 <strong>Efficient & Reliable</strong>: I deliver clean, maintainable code on time.</p>
+                      <p style="line-height: 1.2;">➡️ 🤝 <strong>Collaborative</strong>: I excel at working in teams and communicating effectively with clients and developers.</p>
+                      <p style="line-height: 1.2;">➡️ 🔍 <strong>Problem-Solver</strong>: I tackle challenges with creativity and precision, ensuring your project's success.</p>
+                      
+                      <h3 style="line-height: 1.6;">📌 What I Can Do for You:</h3>
+                      <p style="line-height: 1.2;">➡️ Build responsive web platforms</p>
+                      <p style="line-height: 1.2;">➡️ Integrate APIs and optimize performance</p>
+                      <p style="line-height: 1.2;">➡️ Maintain and enhance existing applications</p>
+                      
+                      <p style="line-height: 1.6;">Let’s work together to bring your ideas to life! I’m excited to hear about your project—reach out today.</p>
 
                 </p>
               </div>
@@ -638,7 +635,8 @@
     
         // Calculate total experience and insert into the HTML
         const totalExperience = calculateTotalExperience();
-        document.getElementsByClassName('experience-years').innerText = totalExperience;
+        const experienceElement = document.querySelector('.experience-years');
+        experienceElement.innerText = totalExperience;
     </script>
   </body>
 </html>
