@@ -124,13 +124,11 @@
             <div class="col-lg-7">
               <div class="about-descr">
                 <p class="p-heading">
-                  "In some ways, programming is like painting"
+                 Seasoned Full-Stack Developer | <span class="experience-years"> Years of Experience
                 </p>
                 <p class="separator">
-                    ⭐ Seasoned Full-Stack Developer | 4.5+ Years of Experience
-
                     Hello! 👋
-                    I'm a results-driven software developer with over  <span id="experience-years"></span> years of hands-on experience building dynamic and scalable web applications. My expertise spans:
+                    I'm a results-driven software developer with over  <span class="experience-years"></span> years of hands-on experience building dynamic and scalable web applications. My expertise spans:
                     
                     ➡️ Frontend Development: React.js, Angular.js
                     ➡️ Backend Development: Node.js, Laravel (PHP), .NET (C#)
@@ -636,7 +634,7 @@
     
         // Calculate total experience and insert into the HTML
         const totalExperience = calculateTotalExperience();
-        document.getElementById('experience-years').innerText = totalExperience;
+        document.getElementsByClassName('experience-years').innerText = totalExperience;
     </script>
   </body>
 </html>
